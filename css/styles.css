@@ -70,7 +70,7 @@ body {
 #page-container {
 	padding: 54px 14px 15px;
 	margin: 0 auto;
-	width: 837px;
+	width: 870px;
 }
 #main {
 	float: right;
@@ -129,6 +129,7 @@ body {
 	}
 		#tweet-controls {
 			text-align: right;
+			display: none;
 		}
 			#tweet-controls div {
 				display: inline-block;
@@ -138,6 +139,9 @@ body {
 				color: #999;
 				text-shadow: 0 1px 1px rgba(255,255,255,.75);
 			}
+			#char-count.warning {
+				color: red;
+			}
 
 /* TWEET */
 .tweet {
@@ -146,6 +150,11 @@ body {
 	border-bottom: 1px solid #e8e8e8;
 	min-height: 60px;
 	border-radius: 6px;
+}
+
+.tweet:hover {
+	cursor: pointer;
+	background-color: #ebf3f8;
 }
 
 	.tweet .avatar {
@@ -166,8 +175,12 @@ body {
 		padding-left: 42px;
 	}
 
+.tweet:hover .tweet-actions {
+	display: block;
+}
 	.tweet-actions {
 		text-align: right;
+		/*display: none;*/
 	}
 		.tweet-actions ul {
 			list-style-type: none;
@@ -175,9 +188,13 @@ body {
 			.tweet-actions li {
 				display: inline-block;
 				font-size: 12px;
-				color: #2FC2EF;
+				color: #ddd;
 				cursor: pointer;
 				margin-right: 2px;
+			}
+
+			.tweet:hover .tweet-actions li {
+				color: #2FC2EF;
 			}
 
 	.icon {
@@ -259,4 +276,6 @@ body {
 				left: 0;
 			}
 
-
+			.stats, .reply {
+				display: none;
+			}

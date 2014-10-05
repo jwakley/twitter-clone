@@ -4,15 +4,19 @@
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
 		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+
 	</head>
 	<body>
 		<div id="page-container">
 			<div id="dashboard">
 				<div id="profile-summary">
 					<div class="content">
-						<img class='avatar' src='img/alagoon.jpg' />
-						<p>Your Name Here</p>
+						<img class='avatar' src='img/alagoon.jpg' data-toggle="tooltip" data-placement="top" title="Johnny Doe" />
+						<p>Johnny Doe</p>
 					</div>
 				</div>
 				<div id="tweet-content">
@@ -43,7 +47,7 @@
 					<!-- HINT: jQuery ".prepend" method -->
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="img/damenleeturks.jpg" />
+							<img class="avatar" src="img/damenleeturks.jpg" data-toggle="tooltip" data-placement="top" title="My BFF" />
 							<strong class="fullname">My BFF</strong>
 							<span class="username">@mybff</span>
 
@@ -85,7 +89,7 @@
 
 								<!-- BLACK DIAMOND: Make the timestamp below similar to how they look on Twitter (1h, 18m, 1m) and use the jQuery timeago plugin to make them automatic. -->
 								<!-- HINT: Refer to timeago documentation -->
-								<div class="time">
+								<div class="time" title="2013-9-13T13:04:00Z">
 									1:04 PM - 19 Sep 13
 								</div>
 							</div>
@@ -98,7 +102,7 @@
 
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="img/funwatercat.jpg" />
+							<img class="avatar" src="img/funwatercat.jpg" data-toggle="tooltip" data-placement="top" title="The Onion" />
 							<strong class="fullname">The Onion</strong>
 							<span class="username">@theonion</span>
 							<p class="tweet-text">“I'm able to speak confidently about a wide range of subjects, so it’s probably hard for most women to follow.” http://onion.com/1aWfKwf </p>
@@ -121,11 +125,11 @@
 								</div>
 								<div class="users-interact">
 									<div>
-										<img src="img/jennyshen.jpg" />
+										<img src="img/jennyshen.jpg" data-toggle="tooltip" data-placement="top" title="Jenny Shen" />
 										<img src="img/damenleeturks.jpg" />
 									</div>
 								</div>
-								<div class="time">
+								<div class="time" title="2013-9-13T13:04:00Z">
 									1:04 PM - 19 Sep 13
 								</div>
 							</div>
@@ -138,7 +142,7 @@
 
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="img/jennyshen.jpg" />
+							<img class="avatar" src="img/jennyshen.jpg"  data-toggle="tooltip" data-placement="top" title="Jenny Shen" />
 							<strong class="fullname">Harvard Biz Review</strong>
 							<span class="username">@HarvardBiz</span>
 							<p class="tweet-text">It is possible to work with a loved one without ruining the relationship http://s.hbr.org/15FDIri </p>
@@ -165,7 +169,7 @@
 										<img src="img/funwatercat.jpg" />
 									</div>
 								</div>
-								<div class="time">
+								<div class="time" title="2014-2-13T13:04:00Z">
 									1:04 PM - 19 Sep 13
 								</div>
 							</div>
@@ -178,5 +182,12 @@
 				</div><!-- #stream -->
 			</div><!-- #main -->
 		</div><!-- #page-container -->
+		<script src="js/jquery-2.0.3.min.js"></script>
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+		<script src="js/jquery.timeago.js"></script>
+		<script src="js/animations.js"></script>
 	</body>
 </html>
